@@ -598,7 +598,7 @@ namespace AGVMS
         {
             int beginStationNo = 20;
 
-            for (int i = 0; i < 29; i++)
+            for (int i = beginStationNo; i < 27; i++)
             {
                 BufferStatus item = new BufferStatus();
                 item.StationNo = beginStationNo.ToString();
@@ -608,13 +608,24 @@ namespace AGVMS
 
                 beginStationNo += 1;
             }
+
+            int beginStationNo2 = 40;
+            for (int i = beginStationNo2; i < 49; i++)
+            {
+                BufferStatus item = new BufferStatus();
+                item.StationNo = beginStationNo2.ToString();
+                item.IsEmpty = "9";
+                item.ArrangedTask = "9";
+                listBufferStatusData.Add(item);
+
+                beginStationNo2 += 1;
+            }
         }
 
         private void setRotateStatus()
         {
             int beginStationNo = 30;
-
-            for (int i = 0; i < 28; i++)
+            for (int i = beginStationNo; i < 38; i++)
             {
                 RotateStatus item = new RotateStatus();
                 item.StationNo = beginStationNo.ToString();
@@ -622,6 +633,17 @@ namespace AGVMS
                 listRotateStatusData.Add(item);
 
                 beginStationNo += 1;
+            }
+
+            int beginStationNo2 = 50;
+            for (int i = beginStationNo2; i < 58; i++)
+            {
+                RotateStatus item = new RotateStatus();
+                item.StationNo = beginStationNo2.ToString();
+                item.IsEmpty = "9";
+                listRotateStatusData.Add(item);
+
+                beginStationNo2 += 1;
             }
         }
         #endregion
